@@ -1,3 +1,5 @@
 module.exports.master = function(req, res){
-    return res.end('<h1> this is the master control</h1>');
+    return res.render('home', {
+        title: "Master Control ( Don't take the vibranium )"
+    });
 }
