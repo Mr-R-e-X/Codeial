@@ -14,12 +14,13 @@ router.post('/create', usersController.create);
 // router.post('/create-session', usersController.createSession);
 // router.post('/sign-out', usersController.signOut);
 
+
 // use passport as a middleware to authenticate
 router.post('/create-session', passport.authenticate(
     'local',
     {failuerRedirect: '/users/sign-in'}
  ), usersController.createSession);
 
-
+router.get('/sign-out', usersController.destroySession);
 
 module.exports = router;
