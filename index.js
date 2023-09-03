@@ -7,7 +7,7 @@ const db = require('./config/mongoose');
 
 app.use(express.urlencoded());
 
-app.unsubscribe(cookieParser());
+app.use(cookieParser());
 
 app.use(express.static('./assets'));
 app.use(expressLayouts);
