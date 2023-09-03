@@ -14,6 +14,7 @@ app.use(express.urlencoded());
 app.use(cookieParser());
 
 app.use(express.static('./assets'));
+
 app.use(expressLayouts);
 
 // extract style and scripts from sub pages into the layout  
@@ -41,6 +42,8 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(passport.setAuthenticatedUser);
 
 // use express router
 app.use('/', require('./routes'));
