@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+header {
+  top: -15px;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  font: 1.9rem "Russo One", sans-serif;
+  color: blue;
+  justify-content: space-between; }
+  header #list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around; }
+  header #title {
+    padding: 1px;
+    border-right: 4px solid blue;
+    animation: cursor 1s infinite step-end, typing 4s infinite steps(6);
+    overflow: hidden; }
+
+@keyframes cursor {
+  0%, 100% {
+    border-color: transparent; }
+  50% {
+    border-color: blue; } }
+
+@keyframes typing {
+  0% {
+    width: 0ch; }
+  /*Text is hidden*/
+  30% {
+    width: 6ch; }
+  /*The enitre header will be typed out 1 character at a time*/
+  80% {
+    width: 6ch; }
+  /*Text stays visible*/
+  90% {
+    width: 0ch; }
+  /*Text is deleted*/
+  100% {
+    width: 0ch; }
+  /*Text stays hidden*/ }
+  header #user-name, header #sign-out, header #sign-in, header #sign-up {
+    font: 1.2rem "Russo One", sans-serif;
+    margin: 5px;
+    padding: 1px;
+    align-items: center; }
+  header #pipe {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 1px; }
+  header a {
+    text-decoration: none;
+    color: blue; }
+  header a:hover {
+    background-color: blue;
+    color: white;
+    border-bottom: 1px sold blue;
+    animation: 1.5s ease-in-out infinite;
+    border-radius: 5px;
+    padding: 2px; }
