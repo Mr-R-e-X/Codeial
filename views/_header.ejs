@@ -4,8 +4,9 @@
         <% if (locals.user){ %>
 
             <div id="user-name">
-                <a href="users/profile"> <%= user.name %> </a>
+                <a href="/users/profile"> <%= user.name %> </a>
             </div>
+            <div id="pipe"> | </div>
             <div id="sign-out">
                 <a href="/users/sign-out"> Sign Out </a>
             </div>

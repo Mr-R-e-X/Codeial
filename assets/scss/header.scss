@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 $font-stack: 'Russo One', sans-serif;
-$font-stack-1: 'ADLaM Display', cursive;
+// $font-stack-1: 'ADLaM Display', cursive;
 header{
     top: -15px;
     height: 5vh;
     width: 100%;
     // background-color: blue;
     display: flex;
-    font: 1.9rem $font-stack;
-    color: blue;
     justify-content: space-between;
     #list{
         display: flex;
@@ -18,13 +16,16 @@ header{
     }
     #title{
         padding: 1px;
-        border-right: 4px solid blue;
+        font: 1.9rem $font-stack;
+        font-weight: 200;
+        color: #ffffff;
+        border-right: 4px solid #ffffff;
         animation: cursor 1s infinite step-end, typing 4s infinite steps(6);
         overflow: hidden;
     }
     @keyframes cursor{
         0%, 100%{border-color: transparent;}
-        50%{border-color: blue;}
+        50%{border-color: #ffffff;}
     }
     @keyframes typing{
         0%{ width: 0ch} /*Text is hidden*/
@@ -46,12 +47,12 @@ header{
     }
     a{
         text-decoration: none;
-        color: blue;
+        color: #ffffff;
     }
     a:hover{
-        background-color: blue;
-        color: white;
-        border-bottom: 1px sold blue;
+        background-color: #1ed760;;
+        color: #ffffff;;
+        border-bottom: 1px sold #1ed760;;
         animation: 1.5s ease-in-out infinite;
         border-radius: 5px;
         padding: 2px

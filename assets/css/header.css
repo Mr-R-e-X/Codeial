@@ -4,8 +4,6 @@ header {
   height: 5vh;
   width: 100%;
   display: flex;
-  font: 1.9rem "Russo One", sans-serif;
-  color: blue;
   justify-content: space-between; }
   header #list {
     display: flex;
@@ -14,7 +12,10 @@ header {
     justify-content: space-around; }
   header #title {
     padding: 1px;
-    border-right: 4px solid blue;
+    font: 1.9rem "Russo One", sans-serif;
+    font-weight: 200;
+    color: #ffffff;
+    border-right: 4px solid #ffffff;
     animation: cursor 1s infinite step-end, typing 4s infinite steps(6);
     overflow: hidden; }
 
@@ -22,7 +23,7 @@ header {
   0%, 100% {
     border-color: transparent; }
   50% {
-    border-color: blue; } }
+    border-color: #ffffff; } }
 
 @keyframes typing {
   0% {
@@ -51,11 +52,11 @@ header {
     padding: 1px; }
   header a {
     text-decoration: none;
-    color: blue; }
+    color: #ffffff; }
   header a:hover {
-    background-color: blue;
-    color: white;
-    border-bottom: 1px sold blue;
+    background-color: #1ed760;
+    color: #ffffff;
+    border-bottom: 1px sold #1ed760;
     animation: 1.5s ease-in-out infinite;
     border-radius: 5px;
     padding: 2px; }

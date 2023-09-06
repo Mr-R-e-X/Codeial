@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+#fot-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 5vh;
+  width: 100%; }
+  #fot-list a {
+    text-decoration: none;
+    margin: 5px;
+    color: #ffffff;
+    font: 1rem "Russo One", sans-serif; }
+  #fot-list a:hover {
+    background-color: #1ed760;
+    color: #ffffff;
+    border-bottom: 1px sold #1ed760;
+    animation: 1.5s ease-in-out infinite;
+    border-radius: 5px; }
+  #fot-list #pipe {
+    font-size: 1rem;
+    margin: 5px;
+    padding: 1px; }
