@@ -35,7 +35,7 @@ module.exports.destroy = async function (req, res) {
     }
   } catch (err) {
     if (err) {
-      console.log(`ERROR ===> ${err}`);
+      console.log(`ERROR ===> Delete Comment ==> ${err}`);
       return;
     }
   }
