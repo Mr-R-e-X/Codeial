@@ -20,7 +20,8 @@ header {
     overflow: hidden; }
 
 @keyframes cursor {
-  0%, 100% {
+  0%,
+  100% {
     border-color: transparent; }
   50% {
     border-color: #ffffff; } }
@@ -41,7 +42,10 @@ header {
   100% {
     width: 0ch; }
   /*Text stays hidden*/ }
-  header #user-name, header #sign-out, header #sign-in, header #sign-up {
+  header #user-name,
+  header #sign-out,
+  header #sign-in,
+  header #sign-up {
     font: 1.2rem "Russo One", sans-serif;
     margin: 5px;
     padding: 1px;
