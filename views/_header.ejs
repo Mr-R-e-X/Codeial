@@ -1,27 +1,26 @@
-<header> 
-    <div id="title">Codeial</div>
-    <div id="list">
-        <% if (locals.user){ %>
+<header>
+  <div id="title">Codeial</div>
+  <div id="list">
+    <% if (locals.user){ %>
 
-            <div id="user-name">
-                <a href="/users/profile"> <%= user.name %> </a>
-            </div>
-            <div id="pipe"> | </div>
-            <div id="sign-out">
-                <a href="/users/sign-out"> Sign Out </a>
-            </div>
-            
-        <% }else{ %>
-            
-            <div id="sign-in">
-                <a href="/users/sign-in">Sign In</a>
-            </div>
-            <div id="pipe"> | </div>
-            <div id="sign-up">
-                <a href="/users/sign-up">Sign Up</a>
-            </div>
-            
-        <% } %>
-
+    <div id="user-name">
+      <a href="/users/profile"> <%= user.name %> </a>
     </div>
+    <div id="pipe">|</div>
+    <div id="sign-out">
+      <a href="/users/sign-out"> Sign Out </a>
+    </div>
+
+    <% }else{ %>
+
+    <div id="sign-in">
+      <a href="/users/sign-in">Sign In</a>
+    </div>
+    <div id="pipe">|</div>
+    <div id="sign-up">
+      <a href="/users/sign-up">Sign Up</a>
+    </div>
+
+    <% } %>
+  </div>
 </header>
