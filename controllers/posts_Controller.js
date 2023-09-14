@@ -14,31 +14,21 @@ module.exports.create = async function (req, res) {
   }
 };
 
-module.exports.destroy = function (req, res) {
-  Post.findById(req.params.id)
-    .then(function (post) {
-      //.id means converting the object id into string
-      if (post.user == req.user.id) {
-        post.deleteOne();
-        Comment.deleteMany({ post: req.params.id })
-          .then(function (post) {
-            console.log(`Successfully deleted the comment :: ${post}`);
-            return res.redirect("back");
-          })
-          .catch(function (err) {
-            if (err) {
-              console.log(`Error ===> can't delete the comments :: ${err}`);
-              return res.redirect("back");
-            }
-          });
-      } else {
-        return res.redirect("back");
-      }
-    })
-    .catch(function (err) {
-      if (err) {
-        console.log(`ERROR ===> ${err}`);
-        return res.redirect("back");
-      }
-    });
+module.exports.destroy = async function (req, res) {
+  try {
+    let post = await Post.findById(req.params.id);
+    //.id means converting the object id into string
+    if (req.user.id == post.user) {
+      post.deleteOne();
+      await Comment.deleteMany({ post: req.params.id });
+      return res.redirect("back");
+    } else {
+      return res.redirect("back");
+    }
+  } catch (err) {
+    if (err) {
+      console.log(`ERROR ===> ${err}`);
+      return;
+    }
+  }
 };
