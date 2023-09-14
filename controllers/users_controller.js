@@ -60,16 +60,20 @@ module.exports.create = async function (req, res) {
 
 // using passport for sign in and create a session
 module.exports.createSession = function (req, res) {
+  req.flash('success', 'Logged in Successfully');
   return res.redirect("/");
 };
 
 module.exports.destroySession = function (req, res, next) {
-  req.logout(function (err) {
-    if (err) {
+  req.logout(function(err){
+    if(err){
       return next(err);
     }
+    req.flash('success', 'You have Logged Out');
     return res.redirect("/");
   });
+  
+  
 };
 // Updating profile details.
 module.exports.update = async function (req, res) {

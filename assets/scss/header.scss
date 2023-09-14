@@ -18,8 +18,8 @@ header {
     padding: 1px;
     font: 1.9rem $font-stack;
     font-weight: 200;
-    color: #ffffff;
-    border-right: 4px solid #ffffff;
+    color: #37c50b;
+    border-right: 4px solid #37c50b;
     animation:
       cursor 1s infinite step-end,
       typing 4s infinite steps(6);
@@ -31,7 +31,7 @@ header {
       border-color: transparent;
     }
     50% {
-      border-color: #ffffff;
+      border-color: #37c50b;
     }
   }
   @keyframes typing {
@@ -67,14 +67,10 @@ header {
   }
   a {
     text-decoration: none;
-    color: #ffffff;
+    color: #37c50b;
   }
   a:hover {
-    background-color: #1ed760;
-    color: #ffffff;
-    border-bottom: 1px sold #1ed760;
-    animation: 1.5s ease-in-out infinite;
-    border-radius: 5px;
-    padding: 2px;
+    // background-color: #37c50b;
+    color: #9cec83;
   }
 }
