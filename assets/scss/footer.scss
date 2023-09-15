@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 $font-stack: "Russo One", sans-serif;
 #fot-list {
+  position: sticky;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,16 +10,8 @@ $font-stack: "Russo One", sans-serif;
   a {
     text-decoration: none;
     margin: 5px;
-    color: #ffffff;
+    color: #37c50b;
     font: 1rem $font-stack;
-  }
-  a:hover {
-    background-color: #1ed760;
-    color: #ffffff;
-    border-bottom: 1px sold #1ed760;
-    animation: 1.5s ease-in-out infinite;
-    border-radius: 5px;
-    // padding: 2px
   }
   #pipe {
     font-size: 1rem;

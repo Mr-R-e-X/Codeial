@@ -2,7 +2,7 @@
 $font-stack: "Russo One", sans-serif;
 // $font-stack-1: 'ADLaM Display', cursive;
 header {
-  top: -15px;
+  // top: -15px;
   height: 5vh;
   width: 100%;
   // background-color: blue;
@@ -16,6 +16,7 @@ header {
   }
   #title {
     padding: 1px;
+    position: sticky !important;
     font: 1.9rem $font-stack;
     font-weight: 200;
     color: #37c50b;
@@ -55,12 +56,14 @@ header {
   #sign-out,
   #sign-in,
   #sign-up {
+    position: sticky !important;
     font: 1.2rem $font-stack;
     margin: 5px;
     padding: 1px;
     align-items: center;
   }
   #pipe {
+    position: sticky !important;
     font-size: 1rem;
     margin: 5px;
     padding: 1px;

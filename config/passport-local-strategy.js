@@ -9,25 +9,24 @@ passport.use(
   new LocalStrategy(
     {
       usernameField: "email",
+      passReqToCallback: true,
     },
-    function (email, password, done) {
-      // find a user and estblish the identity
-      User.findOne({
-        email: email,
-      })
-        .then(function (user) {
-          if (!user || user.password != password) {
-            console.log("Invalid Username/Password");
-            return done(null, false);
-          }
+    async function (req, email, password, done) {
+      try {
+        // find a user and estblish the identity
+        let user = await User.findOne({ email: email });
+        if (!user || user.password != password) {
+          req.flash("error", "Invalid Username / Password");
+          return done(null, false);
+        } else {
           return done(null, user);
-        })
-        .catch(function (err) {
-          if (err) {
-            console.log(`Error in finding user --> Passport :: ${err}`);
-            return done(err);
-          }
-        });
+        }
+      } catch (err) {
+        if (err) {
+          req.flash("error", err);
+          return done(err);
+        }
+      }
     }
   )
 );

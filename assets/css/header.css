@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 header {
-  top: -15px;
   height: 5vh;
   width: 100%;
   display: flex;
@@ -12,6 +11,7 @@ header {
     justify-content: space-around; }
   header #title {
     padding: 1px;
+    position: sticky !important;
     font: 1.9rem "Russo One", sans-serif;
     font-weight: 200;
     color: #37c50b;
@@ -46,11 +46,13 @@ header {
   header #sign-out,
   header #sign-in,
   header #sign-up {
+    position: sticky !important;
     font: 1.2rem "Russo One", sans-serif;
     margin: 5px;
     padding: 1px;
     align-items: center; }
   header #pipe {
+    position: sticky !important;
     font-size: 1rem;
     margin: 5px;
     padding: 1px; }
