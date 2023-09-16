@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 $font-stack: "Russo One", sans-serif;
-// $font-stack-1: 'ADLaM Display', cursive;
 header {
-  // top: -15px;
   height: 5vh;
+  top: 0;
   width: 100%;
-  // background-color: blue;
+  position: fixed;
+  background-color: rgb(226, 105, 24);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   #list {
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +18,7 @@ header {
   #title {
     padding: 1px;
     position: sticky !important;
-    font: 1.9rem $font-stack;
+    font: 1.8rem $font-stack;
     font-weight: 200;
     color: #37c50b;
     border-right: 4px solid #37c50b;

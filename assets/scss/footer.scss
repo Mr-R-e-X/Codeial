@@ -1,21 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 $font-stack: "Russo One", sans-serif;
-#fot-list {
-  position: sticky;
+footer{
+  top: 95%;
+  position: fixed;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   height: 5vh;
   width: 100%;
-  a {
-    text-decoration: none;
-    margin: 5px;
-    color: #37c50b;
-    font: 1rem $font-stack;
-  }
-  #pipe {
-    font-size: 1rem;
-    margin: 5px;
-    padding: 1px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(226, 105, 24);
+  #fot-list {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    a {
+      text-decoration: none;
+      text-align: center;
+      margin: 5px;
+      color: #37c50b;
+      font: 1rem $font-stack;
+    }
+    #pipe {
+      font-size: 1rem;
+      margin: 5px;
+      padding: 1px;
+    }
   }
 }
+

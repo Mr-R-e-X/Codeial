@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 header {
   height: 5vh;
+  top: 0;
   width: 100%;
+  position: fixed;
+  background-color: #e26918;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
   header #list {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +16,7 @@ header {
   header #title {
     padding: 1px;
     position: sticky !important;
-    font: 1.9rem "Russo One", sans-serif;
+    font: 1.8rem "Russo One", sans-serif;
     font-weight: 200;
     color: #37c50b;
     border-right: 4px solid #37c50b;

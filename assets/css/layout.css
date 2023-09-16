@@ -1,5 +1,6 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-  height: 90vh; }
+* {
+  margin: 0; }
+  * body {
+    position: fixed;
+    top: 5vh;
+    height: 90vh; }
