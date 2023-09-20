@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 #sign-up-form {
   display: flex;
   flex-direction: column;
@@ -6,6 +7,12 @@
   position: absolute;
   transform: translate(-50%, -50%);
   overflow: hidden; }
+  #sign-up-form h1 {
+    text-align: center;
+    margin-bottom: 1%;
+    padding: 1.5%;
+    font: 1.8rem "Russo One", sans-serif;
+    background: conic-gradient(red, yellow, green); }
   #sign-up-form input[type=text], #sign-up-form input[type=email], #sign-up-form input[type=password] {
     width: 100%;
     padding: 15px;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 #sign-in-form {
   display: flex;
   flex-direction: column;
@@ -6,6 +7,12 @@
   position: absolute;
   transform: translate(-50%, -50%);
   overflow: hidden; }
+  #sign-in-form h1 {
+    text-align: center;
+    font: 1.8rem "Russo One", sans-serif;
+    margin-bottom: 1%;
+    padding: 1.5%;
+    background: conic-gradient(red, yellow, green); }
   #sign-in-form input[type=text], #sign-in-form input[type=email], #sign-in-form input[type=password] {
     width: 100%;
     padding: 15px;

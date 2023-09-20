@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+$font-stack: "Russo One", sans-serif;
 #sign-in-form{
     display: flex;
     flex-direction: column;
@@ -6,6 +8,13 @@
     position: absolute;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    h1{
+        text-align: center;
+        font: 1.8rem $font-stack;
+        margin-bottom: 1%;
+        padding: 1.5%;
+        background: conic-gradient(red, yellow, green);
+    }
     input[type = text], input[type = email], input[type = password] {
         width: 100%;
         padding: 15px;
