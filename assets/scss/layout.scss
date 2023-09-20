@@ -1,8 +1,9 @@
 *{
   margin: 0;
   body{
-    position: fixed;
-    top: 5vh;
-    height: 90vh;
+    // top: 5vh;
+    height: 100%;
+    // overflow: hidden;
+    box-sizing: border-box;
   }
 }

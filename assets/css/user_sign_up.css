@@ -1,4 +1,4 @@
-#sign-in-form {
+#sign-up-form {
   display: flex;
   flex-direction: column;
   left: 50%;
@@ -6,17 +6,17 @@
   position: absolute;
   transform: translate(-50%, -50%);
   overflow: hidden; }
-  #sign-in-form input[type=text], #sign-in-form input[type=email], #sign-in-form input[type=password] {
+  #sign-up-form input[type=text], #sign-up-form input[type=email], #sign-up-form input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 10px 0;
     display: inline-block;
     border: none;
     background-color: #f1f1f1; }
-  #sign-in-form input[type=text]:focus, #sign-in-form input[type=email]:focus, #sign-in-form input[type=password]:focus {
+  #sign-up-form input[type=text]:focus, #sign-up-form input[type=email]:focus, #sign-up-form input[type=password]:focus {
     background-color: #ddd;
     outline: none; }
-  #sign-in-form input[type=submit] {
+  #sign-up-form input[type=submit] {
     background-color: #04aa6d;
     color: white;
     width: 100%;
@@ -25,5 +25,5 @@
     border: none;
     cursor: pointer;
     opacity: 0.9; }
-  #sign-in-form input[type=submit]:hover {
+  #sign-up-form input[type=submit]:hover {
     opacity: 1; }

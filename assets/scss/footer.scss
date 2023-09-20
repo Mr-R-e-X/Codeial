@@ -5,21 +5,26 @@ footer{
   position: fixed;
   display: flex;
   height: 5vh;
-  width: 100%;
+  width: 100vw;
+  padding: 10px 0 10px 0;
   align-items: center;
   justify-content: center;
-  background-color: rgb(226, 105, 24);
+  background: bisque;
+  z-index: 1;
+  // background-color: rgb(226, 105, 24);
   #fot-list {
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    margin-bottom: 2vh;
     a {
       text-decoration: none;
       text-align: center;
+      align-items: center;
       margin: 5px;
-      color: #37c50b;
+      color: #04aa6d;
       font: 1rem $font-stack;
     }
     #pipe {

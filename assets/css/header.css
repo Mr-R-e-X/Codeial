@@ -1,25 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 header {
   height: 5vh;
+  position: sticky;
   top: 0;
-  width: 100%;
-  position: fixed;
-  background-color: #e26918;
+  max-width: 100vw;
+  min-width: 100vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center; }
+  background: bisque;
+  z-index: 1; }
   header #list {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around; }
+    justify-content: space-between; }
   header #title {
     padding: 1px;
-    position: sticky !important;
     font: 1.8rem "Russo One", sans-serif;
     font-weight: 200;
-    color: #37c50b;
-    border-right: 4px solid #37c50b;
+    color: #04aa6d;
+    border-right: 4px solid #04aa6d;
     animation: cursor 1s infinite step-end, typing 4s infinite steps(6);
     overflow: hidden; }
 
@@ -28,7 +27,7 @@ header {
   100% {
     border-color: transparent; }
   50% {
-    border-color: #37c50b; } }
+    border-color: #04aa6d; } }
 
 @keyframes typing {
   0% {
@@ -62,6 +61,6 @@ header {
     padding: 1px; }
   header a {
     text-decoration: none;
-    color: #37c50b; }
+    color: #04aa6d; }
   header a:hover {
     color: #9cec83; }

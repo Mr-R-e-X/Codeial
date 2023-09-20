@@ -4,21 +4,25 @@ footer {
   position: fixed;
   display: flex;
   height: 5vh;
-  width: 100%;
+  width: 100vw;
+  padding: 10px 0 10px 0;
   align-items: center;
   justify-content: center;
-  background-color: #e26918; }
+  background: bisque;
+  z-index: 1; }
   footer #fot-list {
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 2vh; }
     footer #fot-list a {
       text-decoration: none;
       text-align: center;
+      align-items: center;
       margin: 5px;
-      color: #37c50b;
+      color: #04aa6d;
       font: 1rem "Russo One", sans-serif; }
     footer #fot-list #pipe {
       font-size: 1rem;
