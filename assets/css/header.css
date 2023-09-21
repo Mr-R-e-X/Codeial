@@ -8,8 +8,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: bisque;
+  animation: rotateColors 5s linear infinite;
   z-index: 1; }
+
+@keyframes rotateColors {
+  0% {
+    background-color: red; }
+  25% {
+    background-color: indigo; }
+  50% {
+    background-color: green; }
+  75% {
+    background-color: #c07f06; }
+  100% {
+    background-color: red; } }
   header #list {
     display: flex;
     justify-content: space-between; }
@@ -17,8 +29,8 @@ header {
     padding: 1px;
     font: 1.8rem "Russo One", sans-serif;
     font-weight: 200;
-    color: #04aa6d;
-    border-right: 4px solid #04aa6d;
+    color: white;
+    border-right: 4px solid white;
     animation: cursor 1s infinite step-end, typing 4s infinite steps(6);
     overflow: hidden; }
 
@@ -27,7 +39,7 @@ header {
   100% {
     border-color: transparent; }
   50% {
-    border-color: #04aa6d; } }
+    border-color: white; } }
 
 @keyframes typing {
   0% {
@@ -61,6 +73,6 @@ header {
     padding: 1px; }
   header a {
     text-decoration: none;
-    color: #04aa6d; }
+    color: white; }
   header a:hover {
-    color: #9cec83; }
+    color: white; }

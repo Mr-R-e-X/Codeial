@@ -9,10 +9,23 @@
   overflow: hidden; }
   #sign-in-form h1 {
     text-align: center;
+    color: white;
     font: 1.8rem "Russo One", sans-serif;
     margin-bottom: 1%;
     padding: 1.5%;
-    background: conic-gradient(red, yellow, green); }
+    animation: rotateColors 5s linear infinite; }
+
+@keyframes rotateColors {
+  0% {
+    background-color: red; }
+  25% {
+    background-color: indigo; }
+  50% {
+    background-color: green; }
+  75% {
+    background-color: #c07f06; }
+  100% {
+    background-color: red; } }
   #sign-in-form input[type=text], #sign-in-form input[type=email], #sign-in-form input[type=password] {
     width: 100%;
     padding: 15px;
@@ -31,6 +44,7 @@
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    opacity: 0.9; }
+    opacity: 0.9;
+    animation: rotateColors 5s linear infinite; }
   #sign-in-form input[type=submit]:hover {
     opacity: 1; }

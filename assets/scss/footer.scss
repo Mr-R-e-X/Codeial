@@ -9,9 +9,26 @@ footer{
   padding: 10px 0 10px 0;
   align-items: center;
   justify-content: center;
-  background: bisque;
+  overflow: hidden;
+  animation: rotateColors 5s linear infinite;
   z-index: 1;
-  // background-color: rgb(226, 105, 24);
+  @keyframes rotateColors {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: indigo;
+    }
+    50% {
+        background-color: green;
+    }
+    75% {
+        background-color: rgb(192, 127, 6);
+    }
+    100% {
+        background-color: red;
+    }
+}
   #fot-list {
     position: absolute;
     display: flex;
@@ -19,12 +36,13 @@ footer{
     justify-content: center;
     text-align: center;
     margin-bottom: 2vh;
+    overflow: hidden;
     a {
       text-decoration: none;
       text-align: center;
       align-items: center;
       margin: 5px;
-      color: #04aa6d;
+      color: white;
       font: 1rem $font-stack;
     }
     #pipe {

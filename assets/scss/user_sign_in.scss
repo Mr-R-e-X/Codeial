@@ -10,10 +10,28 @@ $font-stack: "Russo One", sans-serif;
     overflow: hidden;
     h1{
         text-align: center;
+        color: white;
         font: 1.8rem $font-stack;
         margin-bottom: 1%;
         padding: 1.5%;
-        background: conic-gradient(red, yellow, green);
+        animation: rotateColors 5s linear infinite; 
+    }
+    @keyframes rotateColors {
+        0% {
+            background-color: red;
+        }
+        25% {
+            background-color: indigo;
+        }
+        50% {
+            background-color: green;
+        }
+        75% {
+            background-color: rgb(192, 127, 6);
+        }
+        100% {
+            background-color: red;
+        }
     }
     input[type = text], input[type = email], input[type = password] {
         width: 100%;
@@ -36,6 +54,7 @@ $font-stack: "Russo One", sans-serif;
         border: none;
         cursor: pointer;
         opacity: 0.9;
+        animation: rotateColors 5s linear infinite; 
     }
     input[type = submit]:hover{
         opacity: 1;
