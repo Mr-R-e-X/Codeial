@@ -3,4 +3,5 @@
   * body {
     height: 100%;
     box-sizing: border-box;
-    overflow: hidden; }
+    overflow-y: scroll;
+    scrollbar-width: none !important; }
