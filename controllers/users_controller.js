@@ -1,8 +1,6 @@
 const User = require("../models/user");
-const fs = require('fs');
-const path = require('path');
-
-
+const fs = require("fs");
+const path = require("path");
 
 // render the sign up page
 module.exports.signUp = function (req, res) {
@@ -42,16 +40,15 @@ module.exports.profile = async function (req, res) {
 
 // get the sign up data
 module.exports.create = async function (req, res) {
-
   try {
     if (req.body.password != req.body.confirm_password) {
       return res.redirect("back");
     }
     let user = await User.findOne({ email: req.body.email });
-    if(!user){
+    if (!user) {
       await User.create(req.body);
       return res.redirect("/users/sign-in");
-    }else {
+    } else {
       return res.redirect("back");
     }
   } catch (err) {
@@ -64,59 +61,47 @@ module.exports.create = async function (req, res) {
 
 // using passport for sign in and create a session
 module.exports.createSession = function (req, res) {
-  req.flash('success', 'Logged in Successfully');
+  req.flash("success", "Logged in Successfully");
   return res.redirect("/");
 };
 
 module.exports.destroySession = function (req, res, next) {
-  req.logout(function(err){
-    if(err){
+  req.logout(function (err) {
+    if (err) {
       return next(err);
     }
-    req.flash('success', 'You have Logged Out');
+    req.flash("success", "You have Logged Out");
     return res.redirect("/");
   });
-  
-  
 };
 // Updating profile details.
 module.exports.update = async function (req, res) {
-  
-  if(req.user.id == req.params.id){
-
-    try{
-      
+  if (req.user.id == req.params.id) {
+    try {
       let user = await User.findById(req.params.id);
-      User.uploadedAvatar(req, res, function(err){
-        if(err){
+      User.uploadedAvatar(req, res, function (err) {
+        if (err) {
           console.log(`Multer Error ===> ${err}`);
         }
         user.name = req.body.name;
         user.email = req.body.email;
 
-        if(req.file){
-
-          if(user.avatar){
-            fs.unlinkSync(path.join(__dirname, '..' , user.avatar));
+        if (req.file) {
+          if (user.avatar) {
+            fs.unlinkSync(path.join(__dirname, "..", user.avatar));
           }
           // this is saving the path of the uploaded file into the avatar field in the user
-          user.avatar = User.avatarPath + '/' + req.file.filename;
+          user.avatar = User.avatarPath + "/" + req.file.filename;
         }
         user.save();
-        return res.redirect('back');
-      })
-
-    }catch(err){
-
+        return res.redirect("back");
+      });
+    } catch (err) {
       console.log(`ERROR ===> Updating Profile ==> ${err}`);
-      return res.redirect('back');
-
+      return res.redirect("back");
     }
-
-  }else{
-
-    req.flash('error', 'Unauthorized');
-    return res.status(401).send(`401 ===> User ==> User Not Found`);    
-  
+  } else {
+    req.flash("error", "Unauthorized");
+    return res.status(401).send(`401 ===> User ==> User Not Found`);
   }
 };
