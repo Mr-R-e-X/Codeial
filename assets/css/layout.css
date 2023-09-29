@@ -1,7 +1,4 @@
-* {
-  margin: 0; }
-  * body {
-    height: 100%;
-    box-sizing: border-box;
-    overflow-y: scroll;
-    scrollbar-width: none !important; }
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to left, #9c27b0, #673ab7); }

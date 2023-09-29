@@ -8,30 +8,14 @@ $font-stack: "Russo One", sans-serif;
     position: absolute;
     transform: translate(-50%, -50%);
     overflow: hidden;
+    // background: linear-gradient(to left, #9c27b0, #673ab7);
     h1{
         text-align: center;
         color: white;
         font: 1.8rem $font-stack;
         margin-bottom: 1%;
         padding: 1.5%;
-        animation: rotateColors 5s linear infinite; 
-    }
-    @keyframes rotateColors {
-        0% {
-            background-color: red;
-        }
-        25% {
-            background-color: indigo;
-        }
-        50% {
-            background-color: green;
-        }
-        75% {
-            background-color: rgb(192, 127, 6);
-        }
-        100% {
-            background-color: red;
-        }
+        // background: linear-gradient(to left, #9c27b0, #673ab7);
     }
     input[type = text], input[type = email], input[type = password] {
         width: 100%;
@@ -54,9 +38,23 @@ $font-stack: "Russo One", sans-serif;
         border: none;
         cursor: pointer;
         opacity: 0.9;
-        animation: rotateColors 5s linear infinite; 
     }
     input[type = submit]:hover{
         opacity: 1;
+    }
+    p{
+        text-align: center;
+        background-color: #04aa6d;
+        color: white;
+        width: 100%;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        opacity: 0.9;
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
     }
 }

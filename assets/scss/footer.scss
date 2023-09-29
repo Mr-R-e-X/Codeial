@@ -1,55 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
-$font-stack: "Russo One", sans-serif;
-footer{
-  top: 95%;
-  position: fixed;
-  display: flex;
-  height: 5vh;
-  width: 100vw;
-  padding: 10px 0 10px 0;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  animation: rotateColors 5s linear infinite;
-  z-index: 1;
-  @keyframes rotateColors {
-    0% {
-        background-color: red;
-    }
-    25% {
-        background-color: indigo;
-    }
-    50% {
-        background-color: green;
-    }
-    75% {
-        background-color: rgb(192, 127, 6);
-    }
-    100% {
-        background-color: red;
-    }
-}
-  #fot-list {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 2vh;
-    overflow: hidden;
-    a {
-      text-decoration: none;
-      text-align: center;
-      align-items: center;
-      margin: 5px;
-      color: white;
-      font: 1rem $font-stack;
-    }
-    #pipe {
-      font-size: 1rem;
-      margin: 5px;
-      padding: 1px;
-    }
-  }
-}
-
+// footer{
+//     position: fixed;
+//     display: flex;
+//     height: 6vh;
+//     width: 100vw;
+//     top: 94vh;
+//     background: linear-gradient(to left, #9c27b0, #673ab7);
+//     justify-content: center;
+//     align-items: center;
+//     #fot-list{
+//         font-family: sans-serif;
+//         color: #fff;
+//         font-size: 1.5rem;
+//         font-weight: 600;
+//         align-items: center;
+//         a{
+//             text-decoration: none;
+//             color: #fff;
+//         }      
+//     }
+// }
