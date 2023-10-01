@@ -7,7 +7,7 @@
       <textarea
         name="content"
         cols="30"
-        rows="3"
+        rows="2"
         placeholder=" What's in your mind ...???"
         required
       ></textarea>
@@ -15,17 +15,17 @@
     </form>
     <% } %>
     <div id="posts-list-container">
-      <h4>Posts</h4>
-      <ul>
+      <h4><i class="fa-solid fa-signs-post" style="color: blueviolet;"></i>&nbsp;POSTS</h4>
+      <p>
         <% for(post of posts){ %> <%- include('_post') -%> <% } %>
-      </ul>
+      </p>
     </div>
   </section>
   <section id="user-friends">
-    <h4>Friends</h4>
+    <h4><i class="fa-solid fa-user-group" style="color: blueviolet;"></i>&nbsp;Friends</h4>
     <% for(u of all_users){ %>
       <p>
-        <i class="fa-regular fa-user" style="color:#fff"></i>
+        <i class="fa-solid fa-user" style="color: blueviolet;"></i>
         <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
       </p>
 

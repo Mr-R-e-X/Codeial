@@ -32,6 +32,7 @@ $font-stack: "Russo One", sans-serif;
     input[type = submit]{
         background-color: #04aa6d;
         color: white;
+        font-size: 1.2rem;
         width: 100%;
         padding: 14px 20px;
         margin: 8px 0;
@@ -46,6 +47,7 @@ $font-stack: "Russo One", sans-serif;
         text-align: center;
         background-color: #04aa6d;
         color: white;
+        font-size: 1.2rem;
         width: 100%;
         padding: 14px 20px;
         margin: 8px 0;
@@ -56,5 +58,8 @@ $font-stack: "Russo One", sans-serif;
             color: #fff;
             text-decoration: none;
         }
+    }
+    p:hover{
+        opacity: 1;
     }
 }

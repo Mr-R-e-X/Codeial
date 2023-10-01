@@ -12,7 +12,10 @@
         data: newPostForm.serialize(),
         success: function (data) {
           let newPost = newPostDom(data.data.post);
-          $("#posts-list-container>ul").prepend(newPost);
+          let name = data.data.post.user.name;
+          console.log(name);
+          console.log(newPost)
+          $("#posts-list-container>p").prepend(newPost);
           new Noty({
             theme: "relax",
             text: "Post Published!",
@@ -31,31 +34,36 @@
 
   // method to creat a post in DOM.
   let newPostDom = function (post) {
-    return $(`<li id="post-${post._id}">
-        <div>
+    return $(`
+    <p id="post-${post._id}" class="post">
+    <div class="border">
+      <h5 style="margin-top: 2px;">
+        <img src="${post.user.avatar} " alt="${post.user.avatar}" height="30px" width="30px" style="border-radius: 50%;">
+        &nbsp;${post.user.name}
+        <i class="fa-solid fa-angles-right"></i>
+      </h5>
+      <h3 style="display: inline;">${post.content}
+        <h6 style="display: inline;">
           <small>
-            <a class="delete-post-button" href="/posts/destroy/${post._id}">X</a>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <a class="delete-post-button" href="/posts/destroy/ ${post._id}">Delete</a>
           </small>
-          <h3>${post.content}</h3>
-          <p>${post.user.name}</p>
-        </div>
-        <div class="post-comments">
-          <form action="/comments/create" method="POST">
-            <input
-              type="text"
-              name="content"
-              placeholder="type here to add comment ..."
-              required
-            />
-            <input type="hidden" name="post" value="${post._id}" />
-            <input type="submit" value="Add Comment" />
-          </form>
-          <div class="post-comments-list">
-            <ul id="post-comments-${post._id}">
-            </ul>
-          </div>
-        </div>
-      </li>
+        </h6>
+      </h3>
+    <div class="post-comments">
+      <form action="/comments/create" id="new-comment-form" method="POST">
+        <input
+          type="text"
+          name="content"
+          placeholder="type here to add comment ..."
+          required
+        />
+        <input type="hidden" name="post" value="${post._id}" />
+        <input type="submit" value="Add Comment" />
+      </form>
+    </div>
+    </div>
+  </p>
       `);
   };
 

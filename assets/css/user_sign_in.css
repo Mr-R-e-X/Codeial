@@ -26,6 +26,7 @@
   #sign-in-form input[type=submit] {
     background-color: #04aa6d;
     color: white;
+    font-size: 1.2rem;
     width: 100%;
     padding: 14px 20px;
     margin: 8px 0;
@@ -38,6 +39,7 @@
     text-align: center;
     background-color: #04aa6d;
     color: white;
+    font-size: 1.2rem;
     width: 100%;
     padding: 14px 20px;
     margin: 8px 0;
@@ -47,3 +49,5 @@
     #sign-in-form p a {
       color: #fff;
       text-decoration: none; }
+  #sign-in-form p:hover {
+    opacity: 1; }

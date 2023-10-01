@@ -1,13 +1,20 @@
-<li id="post-<%= post._id %> ">
-  <div>
-    <% if(locals.user && locals.user.id == post.user.id){ %>
-    <small>
-      <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">X</a>
-    </small>
-    <% } %>
-    <h3><%= post.content %></h3>
-    <p><%= post.user.name %></p>
-  </div>
+<link rel="stylesheet" href="/css/post.css">
+<p id="post-<%= post._id %>" class="post">
+  <div class="border">
+    <h5 style="margin-top: 2px;">
+      <img src="<%= post.user.avatar %> " alt="" height="30px" width="30px" style="border-radius: 50%;">
+      &nbsp;<%= post.user.name %>
+      <i class="fa-solid fa-angles-right"></i>
+    </h5>
+    <h3 style="display: inline;"><%= post.content %>
+      <h6 style="display: inline;"><% if(locals.user && locals.user.id == post.user.id){ %>
+        <small>
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+          <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">Delete</a>
+        </small>
+        <% } %>
+      </h6>
+    </h3>
   <div class="post-comments">
     <% if(locals.user){ %>
     <form action="/comments/create" id="new-comment-form" method="POST">
@@ -22,9 +29,10 @@
     </form>
     <% } %>
     <div id="post-comments-list">
-      <ul id="post-comments-<%= post._id %>">
+      <p id="post-comments-<%= post._id %>">
         <% for(comment of post.comments){ %> <%- include('_comment') -%> <% } %>
-      </ul>
+      </p>
     </div>
   </div>
-</li>
+  </div>
+</p>
