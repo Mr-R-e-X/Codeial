@@ -1,10 +1,9 @@
 <link rel="stylesheet" href="/css/post.css">
-<p id="post-<%= post._id %>" class="post">
+<div id="post-<%= post._id %>" class="post">
   <div class="border">
-    <h5 style="margin-top: 2px;">
-      <img src="<%= post.user.avatar %> " alt="" height="30px" width="30px" style="border-radius: 50%;">
+    <h5 style="margin-top: 2px; color: tomato;">
+      <img src="<%= post.user.avatar %> " alt="" height="40px" width="40px" style="border-radius: 50%;">
       &nbsp;<%= post.user.name %>
-      <i class="fa-solid fa-angles-right"></i>
     </h5>
     <h3 style="display: inline;"><%= post.content %>
       <h6 style="display: inline;"><% if(locals.user && locals.user.id == post.user.id){ %>
@@ -35,4 +34,4 @@
     </div>
   </div>
   </div>
-</p>
+</div>
