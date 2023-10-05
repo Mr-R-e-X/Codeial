@@ -2,7 +2,7 @@
 <div id="comment-<%= comment._id %>" class="comments">
   <p>
     <p style="display: inline; color: tomato;">
-      <img src="<%= comment.user.avatar %> " alt="" height="35px" width="35px" style="border-radius: 50%;">
+      <img src="<%= comment.user.avatar %> " alt="<%= comment.user.avatar %> ">
       &nbsp;<%= comment.user.name %>
     </p>
     <%= comment.content %>

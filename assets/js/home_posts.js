@@ -132,6 +132,18 @@
      }`)
   }
 
+  // let seeComment = $("#visible-comment");
+  // let postCommet = $(".post-comments");
+  // let commentList = $("#post-comments-list");
+  // let commentsVisibility = function(){
+  //   $(seeComment).on("click", function(e){
+  //     e.preventDefault();
+  //     postCommet.style.visibility = "visible";
+  //     commentList.style.visibility = "visible";
+  //   })
+  // }
+  // commentsVisibility();
+
   creatPost();
   deletePost();
   createComment();

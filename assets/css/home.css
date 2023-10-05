@@ -3,7 +3,7 @@
   flex-direction: row;
   max-width: 99vw; }
   #home-container #feed-posts {
-    width: 75%;
+    width: 85%;
     padding-left: 1%;
     padding-right: 1%;
     border-right: 2px solid grey; }
@@ -24,17 +24,21 @@
         opacity: 1;
         background-color: transparent; }
       #home-container #feed-posts #new-post-form input[type=submit] {
-        background-color: #04aa6d;
-        color: white;
+        background-color: white;
+        color: black;
+        border: 2px solid #04aa6d;
         font-size: 1.2rem;
         width: 15%;
         padding: 14px 20px;
-        border: none;
         cursor: pointer;
         align-items: center;
-        opacity: 0.9; }
+        opacity: 0.9;
+        transition-duration: 0.5s; }
       #home-container #feed-posts #new-post-form input[type=submit]:hover {
-        opacity: 1; }
+        opacity: 1;
+        background-color: #04aa6d;
+        color: white;
+        font-weight: 700; }
   #home-container #user-friends {
     padding-left: 1%;
     padding-right: 1%; }

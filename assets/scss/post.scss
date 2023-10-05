@@ -1,6 +1,45 @@
-.border{
-    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
-    border-left: none !important;
-    border-right: none !important;
-    border-radius: 10px;
+.post{
+    margin: 1px;
+    .border{
+        border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+        border-left: none !important;
+        border-right: none !important;
+        border-radius: 10px;
+        .post-user-info{
+            margin-top: 2px;
+            color: tomato;
+            img{
+                height: 40px;
+                width: 40px;
+                border: 1px solid tomato;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.post-comments{
+    margin: 1vh;
+    input[type=text]{
+        width: 60%;
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+    input[type = submit]{
+        width: 20%;
+        background-color: white;
+        border: 2px solid #4caf50;
+        color: black;
+        text-align: center;
+        padding: 6px 12px;
+        text-decoration: none;
+        cursor: pointer;
+        border-radius: 10px;
+        transition-duration: 0.4s;
+    }
+    input[type = submit]:hover{
+        background-color: #4caf50;
+        color: white;
+        font-weight: 600;
+    }
 }

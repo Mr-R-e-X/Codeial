@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 $font-stack: "Russo One", sans-serif;
+
 #sign-in-form{
     display: flex;
     flex-direction: column;
@@ -7,7 +8,7 @@ $font-stack: "Russo One", sans-serif;
     top: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    overflow: hidden;
+    overflow:  hidden;
     // background: linear-gradient(to left, #9c27b0, #673ab7);
     h1{
         text-align: center;

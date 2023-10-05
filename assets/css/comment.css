@@ -8,3 +8,8 @@
   margin-bottom: 1px;
   border-radius: 10px;
   left: 5%; }
+  #post-comments-list .comments img {
+    height: 35px;
+    width: 35px;
+    border: 1px solid tomato;
+    border-radius: 50%; }

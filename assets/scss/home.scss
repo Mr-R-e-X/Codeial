@@ -6,7 +6,7 @@
     // justify-content: flex-start;
     max-width: 99vw;
     #feed-posts{
-        width: 75%;
+        width: 85%;
         padding-left: 1%;
         padding-right: 1%;
         border-right: 2px solid grey;
@@ -31,19 +31,23 @@
                 background-color: transparent;
             }
             input[type = submit]{
-                background-color: #04aa6d;
-                color: white;
+                background-color: white;
+                color: black;
+                border: 2px solid #04aa6d;
                 font-size: 1.2rem;
                 width: 15%;
                 padding: 14px 20px;
                 // margin: 8px 0;
-                border: none;
                 cursor: pointer;
                 align-items: center;
                 opacity: 0.9;
+                transition-duration: 0.5s;
             }
             input[type = submit]:hover{
                 opacity: 1;
+                background-color: #04aa6d;
+                color: white;
+                font-weight: 700;
             }
         }
     }
