@@ -14,6 +14,8 @@ const MongoStore = require("connect-mongo");
 const sassMidleware = require("node-sass-middleware");
 const flash = require('connect-flash');
 const customMware = require('./config/middleware');
+const favicon = require('serve-favicon')
+const path = require('path');
 
 app.use(
   sassMidleware({
@@ -24,6 +26,7 @@ app.use(
     prefix: "/css",
   })
 );
+const faviconPath = path.join(__dirname, 'assets', 'images', 'favicon.png');
 app.use(express.urlencoded());
 
 app.use(cookieParser());
@@ -32,7 +35,8 @@ app.use(express.static("./assets"));
 
 //make the uploads path available to the browser
 app.use('/uploads', express.static(__dirname + '/uploads'));
-
+app.use(express.static("./assets/images"));
+app.use(favicon(faviconPath));
 app.use(expressLayouts);
 
 // extract style and scripts from sub pages into the layout
