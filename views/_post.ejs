@@ -31,6 +31,7 @@
     <% } %>
       
     <div id="post-comments-list">
+      <div><i class="fa-solid fa-comment" style="color: blueviolet;"></i> Comments </div>
       <p id="post-comments-<%= post._id %>">
         <% for(comment of post.comments){ %> <%- include('_comment') -%> <% } %>
       </p>
