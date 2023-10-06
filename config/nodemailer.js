@@ -4,13 +4,13 @@ const path = require("path");
 
 
 let transporter = nodemailer.createTransport({
-    service: 'zohomail',
+    service: 'zohomai',
     host: 'smtp.zoho.in',
     port: 587,
     secure: false,
     auth: {
-        user: 'souvikhazra@zohomail.in',
-        pass: 'Souvik13#@'
+        user: '',
+        pass: ''
     }
 });
 
