@@ -1,1 +1,144 @@
+aside{
+    img{
+        height: 350px;
+        width: 350px;
+        position: absolute;
+        border-radius: 50%;
+        left: 48%;
+        top: 25%;
+        padding: 15px;
+        transition-duration: 0.4s;
+    }
+    img:hover{
+        padding: 0px;
+        height: 355px;
+        width: 355px;
+        border: 1px solid blueviolet;
+        box-shadow: 15px 15px 10px lightseagreen;
+    }
+}
+    
+.profile-info{
+    width: max-content;
+    padding-right: 3vw;
+    height: max-content;
+    padding-bottom: 3.5vh;
+    left: 3vw;
+    top: 5vh;
+    position: relative;
+    border-top: 1px solid blueviolet;
+    border-left: 1px solid blueviolet;
+    border-radius: 20px;
+    box-shadow: 10px 10px 6px lightseagreen;
+    .personal-details{
+        max-width: 30%;
+        min-width: max-content;
+        position: relative;
+        padding: 1vw;
+        padding-right: 2.5vw;
+        left: 15px;
+        top: 15px;
+        border-top: 1px solid blueviolet;
+        border-left: 1px solid blueviolet;
+        border-radius: 20px;
+        box-shadow: 10px 10px 6px lightseagreen;
+        .p-title{
+            color: black;
 
+        }
+        .p-details{
+            position: relative;
+            left: 2vw;
+            color: tomato;
+        }
+    }
+    .update-form{
+        max-width: 30%;
+        min-width: max-content;
+        position: relative;
+        padding: 1vw;
+        left: 15px;
+        margin-top: 5vh;
+        border-top: 1px solid blueviolet;
+        border-left: 1px solid blueviolet;
+        border-radius: 20px;
+        box-shadow: 10px 10px 6px lightseagreen;
+        .form-title{
+            padding-left: 10px;
+        }
+        .form-details{
+            position: relative;
+            padding-left: 2vw;
+            label{
+                display: block;
+            }
+            input[type=text]{
+                display: block;
+                width: 100%;
+                outline: none;
+                border: none;
+                margin: 2px;
+                background-color: lightgrey;
+                padding: 1vh;
+                border-radius: 10px;
+                letter-spacing: 0.3px;
+                cursor: pointer;
+            }
+            input[type=file]{
+                display: block;
+                width: 100%;
+                outline: none;
+                border: none;
+                margin: 2px;
+                background-color: lightgrey;
+                padding: 1vh;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            input[type=submit]{
+                display: block;
+                width: 100%;
+                outline: none;
+                border: none;
+                margin: 2px;
+                margin-top: 8px;
+                background-color: lightgreen;
+                padding: 1vh;
+                border-radius: 10px;
+                cursor: pointer;
+                transition-duration: 0.3s;
+            }
+            input[type=submit]:hover{
+                background-color: rgb(21, 196, 21);
+                color: #fff;
+            }
+
+        }
+    }
+}
+.profile-user-dtls{
+    position: relative;
+    top: 30%;
+    left: 5vw;
+    .personal-details{
+        max-width: 30%;
+        min-width: max-content;
+        position: relative;
+        padding: 1vw;
+        padding-right: 2.5vw;
+        left: 15px;
+        top: 5px;
+        border-top: 1px solid blueviolet;
+        border-left: 1px solid blueviolet;
+        border-radius: 20px;
+        box-shadow: 10px 10px 6px lightseagreen;
+        .p-title{
+            color: black;
+        }
+        .p-details{
+            position: relative;
+            left: 2vw;
+            color: tomato;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+aside img {
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  border-radius: 50%;
+  left: 48%;
+  top: 25%;
+  padding: 15px;
+  transition-duration: 0.4s; }
+
+aside img:hover {
+  padding: 0px;
+  height: 355px;
+  width: 355px;
+  border: 1px solid blueviolet;
+  box-shadow: 15px 15px 10px lightseagreen; }
+
+.profile-info {
+  width: max-content;
+  padding-right: 3vw;
+  height: max-content;
+  padding-bottom: 3.5vh;
+  left: 3vw;
+  top: 5vh;
+  position: relative;
+  border-top: 1px solid blueviolet;
+  border-left: 1px solid blueviolet;
+  border-radius: 20px;
+  box-shadow: 10px 10px 6px lightseagreen; }
+  .profile-info .personal-details {
+    max-width: 30%;
+    min-width: max-content;
+    position: relative;
+    padding: 1vw;
+    padding-right: 2.5vw;
+    left: 15px;
+    top: 15px;
+    border-top: 1px solid blueviolet;
+    border-left: 1px solid blueviolet;
+    border-radius: 20px;
+    box-shadow: 10px 10px 6px lightseagreen; }
+    .profile-info .personal-details .p-title {
+      color: black; }
+    .profile-info .personal-details .p-details {
+      position: relative;
+      left: 2vw;
+      color: tomato; }
+  .profile-info .update-form {
+    max-width: 30%;
+    min-width: max-content;
+    position: relative;
+    padding: 1vw;
+    left: 15px;
+    margin-top: 5vh;
+    border-top: 1px solid blueviolet;
+    border-left: 1px solid blueviolet;
+    border-radius: 20px;
+    box-shadow: 10px 10px 6px lightseagreen; }
+    .profile-info .update-form .form-title {
+      padding-left: 10px; }
+    .profile-info .update-form .form-details {
+      position: relative;
+      padding-left: 2vw; }
+      .profile-info .update-form .form-details label {
+        display: block; }
+      .profile-info .update-form .form-details input[type=text] {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+        margin: 2px;
+        background-color: lightgrey;
+        padding: 1vh;
+        border-radius: 10px;
+        letter-spacing: 0.3px;
+        cursor: pointer; }
+      .profile-info .update-form .form-details input[type=file] {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+        margin: 2px;
+        background-color: lightgrey;
+        padding: 1vh;
+        border-radius: 10px;
+        cursor: pointer; }
+      .profile-info .update-form .form-details input[type=submit] {
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+        margin: 2px;
+        margin-top: 8px;
+        background-color: lightgreen;
+        padding: 1vh;
+        border-radius: 10px;
+        cursor: pointer;
+        transition-duration: 0.3s; }
+      .profile-info .update-form .form-details input[type=submit]:hover {
+        background-color: #15c415;
+        color: #fff; }
+
+.profile-user-dtls {
+  position: relative;
+  top: 30%;
+  left: 5vw; }
+  .profile-user-dtls .personal-details {
+    max-width: 30%;
+    min-width: max-content;
+    position: relative;
+    padding: 1vw;
+    padding-right: 2.5vw;
+    left: 15px;
+    top: 5px;
+    border-top: 1px solid blueviolet;
+    border-left: 1px solid blueviolet;
+    border-radius: 20px;
+    box-shadow: 10px 10px 6px lightseagreen; }
+    .profile-user-dtls .personal-details .p-title {
+      color: black; }
+    .profile-user-dtls .personal-details .p-details {
+      position: relative;
+      left: 2vw;
+      color: tomato; }
