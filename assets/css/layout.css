@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/0761ef71b14db276ac4793848cfd95fe?family=Cool+jazz);
 body {
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  font-family: 'Cool jazz'; }
