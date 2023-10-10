@@ -7,8 +7,7 @@ module.exports.signUp = function (req, res) {
   if (req.isAuthenticated()) {
     return res.redirect("/users/profile");
   }
-
-  return res.render("user_sign_up", {
+  return res.render('user_sign_in_and_up', {
     title: "Sign Up",
   });
 };
@@ -19,7 +18,7 @@ module.exports.signIn = function (req, res) {
     return res.redirect("/users/profile");
   }
 
-  return res.render("user_sign_in", {
+  return res.render('user_sign_in_and_up', {
     title: "Sign In",
   });
 };
@@ -47,6 +46,7 @@ module.exports.create = async function (req, res) {
     let user = await User.findOne({ email: req.body.email });
     if (!user) {
       await User.create(req.body);
+      req.flash("success", "Signed Up Successfully");
       return res.redirect("/users/sign-in");
     } else {
       return res.redirect("back");

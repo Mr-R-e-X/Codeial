@@ -1,6 +1,7 @@
 .post-comments{
     position: relative;
     left: 10%;
+    width: 80%;
 }
 #post-comments-list{
     position: relative;
@@ -8,6 +9,7 @@
     margin-bottom: 1px;
     border-radius: 10px;
     left: 5%;
+    width: 60%;
     .comments{
         img{
             height: 35px;
