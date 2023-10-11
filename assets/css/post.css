@@ -1,29 +1,32 @@
-@import url(https://db.onlinewebfonts.com/c/0761ef71b14db276ac4793848cfd95fe?family=Cool+jazz);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 .post {
   margin: 1px;
-  font-family: 'Cool jazz'; }
+  font-family: 'Montserrat', sans-serif; }
   .post .border {
-    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    border: 2px solid #512ad8 !important;
     border-left: none !important;
     border-right: none !important;
     border-radius: 10px; }
     .post .border .post-user-info {
       margin-top: 2px;
-      color: tomato; }
+      color: #512da8; }
       .post .border .post-user-info img {
         height: 40px;
         width: 40px;
-        border: 1px solid tomato;
+        border: 1px solid #512da8;
         border-radius: 50%; }
 
 .post-comments {
   margin: 1vh;
-  font-family: 'Cool jazz'; }
+  font-family: 'Montserrat', sans-serif; }
   .post-comments input[type=text] {
     width: 60%;
     padding: 8px 12px;
     border: 1px solid #ccc;
-    border-radius: 10px; }
+    border-radius: 10px;
+    position: relative;
+    left: 10%;
+    outline: none; }
   .post-comments input[type=submit] {
     width: 20%;
     background-color: white;
@@ -31,6 +34,8 @@
     color: black;
     text-align: center;
     padding: 6px 12px;
+    position: relative;
+    left: 10%;
     text-decoration: none;
     cursor: pointer;
     border-radius: 10px;

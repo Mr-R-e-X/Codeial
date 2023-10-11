@@ -11,21 +11,21 @@
         placeholder=" What's in your mind ...???"
         required
       ></textarea>
-      <input type="submit" value="Post" />
+      <input type="submit" value="POST" />
     </form>
     <% } %>
     <div id="posts-list-container">
-      <h4><i class="fa-solid fa-signs-post" style="color: blueviolet;"></i>&nbsp;POSTS</h4>
+      <h3 class="posts-container"><strong>POSTS</strong>&nbsp;<i class="fa-solid fa-code"></i></h3>
       <p>
         <% for(post of posts){ %> <%- include('_post') -%> <% } %>
       </p>
     </div>
   </section>
   <section id="user-friends">
-    <h4><i class="fa-solid fa-user-group" style="color: blueviolet;"></i>&nbsp;Friends</h4>
+    <h4><i class="fa-solid fa-users-rays fa-lg"></i>&nbsp;Users</h4>
     <% for(users of all_users){ %>
       <p>
-        <i class="fa-solid fa-user" style="color: blueviolet;"></i>
+        <img src="<%= users.avatar %> " alt="<%= users.name %>">
         <a href="/users/profile/<%= users.id %>"><%= users.name %></a>
       </p>
 
@@ -34,4 +34,5 @@
 </div>
 <script src="https://kit.fontawesome.com/bf0cf320c3.js" crossorigin="anonymous"></script>
 <script src="/js/home_posts.js"></script>
+<script src="/js/home_post_comments.js"></script>
 

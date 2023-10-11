@@ -10,8 +10,8 @@ aside img {
 
 aside img:hover {
   padding: 0px;
-  border-top: 1.5px solid blueviolet;
-  border-left: 1.5px solid blueviolet;
+  border-top: 3px solid #512da8;
+  border-left: 3px solid #512da8;
   box-shadow: 15px 15px 10px lightseagreen; }
 
 .profile-info {
@@ -22,8 +22,8 @@ aside img:hover {
   left: 3vw;
   top: 5vh;
   position: relative;
-  border-top: 1px solid blueviolet;
-  border-left: 1px solid blueviolet;
+  border-top: 3px solid #512da8;
+  border-left: 3px solid #512da8;
   border-radius: 20px;
   box-shadow: 10px 10px 6px lightseagreen; }
   .profile-info .personal-details {
@@ -34,8 +34,8 @@ aside img:hover {
     padding-right: 2.5vw;
     left: 15px;
     top: 15px;
-    border-top: 1px solid blueviolet;
-    border-left: 1px solid blueviolet;
+    border-top: 3px solid #512da8;
+    border-left: 3px solid #512da8;
     border-radius: 20px;
     box-shadow: 10px 10px 6px lightseagreen; }
     .profile-info .personal-details .p-title {
@@ -51,8 +51,8 @@ aside img:hover {
     padding: 1vw;
     left: 15px;
     margin-top: 5vh;
-    border-top: 1px solid blueviolet;
-    border-left: 1px solid blueviolet;
+    border-top: 3px solid #512da8;
+    border-left: 3px solid #512da8;
     border-radius: 20px;
     box-shadow: 10px 10px 6px lightseagreen; }
     .profile-info .update-form .form-title {
@@ -111,8 +111,8 @@ aside img:hover {
     padding-right: 2.5vw;
     left: 15px;
     top: 5px;
-    border-top: 1px solid blueviolet;
-    border-left: 1px solid blueviolet;
+    border-top: 3px solid #512da8;
+    border-left: 3px solid #512da8;
     border-radius: 20px;
     box-shadow: 10px 10px 6px lightseagreen; }
     .profile-user-dtls .personal-details .p-title {

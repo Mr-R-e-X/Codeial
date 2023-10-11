@@ -1,5 +1,8 @@
-@import url(https://db.onlinewebfonts.com/c/0761ef71b14db276ac4793848cfd95fe?family=Cool+jazz);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 body {
   height: 100vh;
-  width: 100vw;
-  font-family: 'Cool jazz'; }
+  width: 98.7vw;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box; 
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}

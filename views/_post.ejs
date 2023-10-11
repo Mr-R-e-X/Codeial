@@ -18,7 +18,7 @@
       <!-- <input type="button" id="visible-comment" value="Comments"> -->
   <div class="post-comments">
     <% if(locals.user){ %>
-    <form action="/comments/create" id="new-comment-form" method="POST">
+    <form action="/comments/create" id="post-<%= post._id %>-comments-form" method="POST">
       <input
         type="text"
         name="content"
@@ -31,7 +31,7 @@
     <% } %>
       
     <div id="post-comments-list">
-      <div><i class="fa-solid fa-comment" style="color: blueviolet;"></i> Comments </div>
+      <h5 style="position: relative;left: 10%;"><i class="fa-solid fa-comments" style="color: #512ad8;"></i> Comments </h5>
       <p id="post-comments-<%= post._id %>">
         <% for(comment of post.comments){ %> <%- include('_comment') -%> <% } %>
       </p>

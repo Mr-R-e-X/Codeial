@@ -96,56 +96,8 @@
     });
   };
 
-  // method to create comment
-  let createComment = function(){
-    let newCommentForm = $("#new-comment-form");
-
-    newCommentForm.submit(function(e){
-      e.preventDefault();
-      console.log('Add Comment clicked');
-      $.ajax({
-        type: "post",
-        url: "/comments/create",
-        data: newCommentForm.serialize(),
-        success:function(data){
-          let newComment = newCommentDom(data.data.comment);
-          $("#post-comments-list>ul").prepend(newComment);
-        }, error: function(error){
-          console.log(error.responseText);
-        }
-      })
-    })
-  }
-
-  // method to create a comment in DOM
-  let newCommentDom = function(comment){
-    return $(`<li id="comment-${comment._id}">
-        <p>
-          <small>
-            <a href="/comments/destroy/${comment._id}">X</a>
-          </small>
-          ${comment.content}
-          <br />
-          <small> &nbsp; ${comment.user.name} </small>
-        </p>
-        </li>
-     }`)
-  }
-
-  // let seeComment = $("#visible-comment");
-  // let postCommet = $(".post-comments");
-  // let commentList = $("#post-comments-list");
-  // let commentsVisibility = function(){
-  //   $(seeComment).on("click", function(e){
-  //     e.preventDefault();
-  //     postCommet.style.visibility = "visible";
-  //     commentList.style.visibility = "visible";
-  //   })
-  // }
-  // commentsVisibility();
-
+ 
   creatPost();
   deletePost();
-  createComment();
 })
 }
