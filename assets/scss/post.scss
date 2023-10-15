@@ -2,19 +2,21 @@
 .post{
     margin: 1px;
     font-family: 'Montserrat', sans-serif;
+    
     .border{
-        // border: 2px solid #512ad8 !important;
-        // border-left: none !important;
-        // border-right: none !important;
-        // border-radius: 10px;
         .post-user-info{
             margin-top: 2px;
             color: #512da8;
             img{
                 height: 40px;
                 width: 40px;
-                border: 1px solid #512da8;
                 border-radius: 50%;
+                overflow: hidden;
+                transition-duration: 0.4s;
+            }
+            img:hover{
+                transform: scale(1.5);
+                border: 1px solid #512da8;
             }
         }
     }

@@ -30,7 +30,13 @@ class PostComments {
           let newComment = pSelf.newCommentDom(comment);
           $(`#post-comments-${postID}`).append(newComment);
           pSelf.deleteComment($(' .delete-comment-button', newComment));
-
+          new Noty({
+            theme: 'relax',
+            text: "Comment Published",
+            type: 'success',
+            layout: 'topRight',
+            timeout: 1500
+          }).show();
         },
         error: function (error) {
           console.log(error.responseText);
@@ -68,7 +74,7 @@ class PostComments {
           new Noty({
             theme: 'relax',
             text: "Comment Deleted",
-            type: 'success',
+            type: 'warning',
             layout: 'topRight',
             timeout: 1500
           }).show();

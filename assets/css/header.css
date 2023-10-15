@@ -46,13 +46,12 @@ header {
     header #list img {
       margin: 0;
       position: relative;
-      height: 48px;
-      width: 48px;
-      padding: 10px;
+      height: 38px;
+      width: 38px;
       max-width: 55px;
       border-radius: 50%;
       right: 20%;
       transition-duration: 0.3s; }
     header #list img:hover {
-      border: 2px solid #512da8;
-      padding: 0; }
+      border: 1px solid #512da8;
+      transform: scale(1.4); }

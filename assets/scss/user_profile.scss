@@ -7,11 +7,11 @@ aside{
         border-radius: 50%;
         left: 48%;
         top: 25%;
-        padding: 15px;
+        // padding: 15px;
         transition-duration: 0.4s;
     }
     img:hover{
-        padding: 0px;
+        transform: scale(1.3);
         border-top: 3px solid #512da8;
         border-left: 3px solid #512da8;
         box-shadow: 15px 15px 10px lightseagreen;

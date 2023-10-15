@@ -8,8 +8,12 @@
     .post .border .post-user-info img {
       height: 40px;
       width: 40px;
-      border: 1px solid #512da8;
-      border-radius: 50%; }
+      border-radius: 50%;
+      overflow: hidden;
+      transition-duration: 0.4s; }
+    .post .border .post-user-info img:hover {
+      transform: scale(1.5);
+      border: 1px solid #512da8; }
 
 .post-comments {
   margin: 1vh;
