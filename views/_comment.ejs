@@ -1,15 +1,10 @@
-<link rel="stylesheet" href="/css/comment.css">
+<link rel="stylesheet" href="/css/comment.css" />
 <div id="comment-<%= comment._id %>" class="comments">
-  <p>
-    <p style="display: inline; color: tomato;">
-      <img src="<%= comment.user.avatar %> " alt="<%= comment.user.avatar %> ">
-      &nbsp;<%= comment.user.name %>
-    </p>
-    <%= comment.content %>
-    <% if (locals.user && locals.user.id == comment.user.id){ %>
-      <small>
-        <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>">Delete Comment</a>
-      </small>
-      <% } %>
-  </p>
+  <img src="<%= comment.user.avatar %> " alt="<%= comment.user.name %> "/>
+  <p> &nbsp;<%= comment.user.name %> </p>
+   <%= comment.content %> <% if (locals.user && locals.user.id == comment.user.id){ %>
+  <small>
+    <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>">Delete Comment</a>
+  </small>
+  <% } %>
 </div>

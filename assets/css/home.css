@@ -4,11 +4,11 @@
   flex-direction: row;
   font-family: 'Montserrat', sans-serif;
   max-width: 99vw; }
-  #home-container .posts-container {
+  #home-container .posts-title {
     color: antiquewhite;
     text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black; }
   #home-container #feed-posts {
-    width: 85%;
+    width: 78%;
     padding-left: 1%;
     padding-right: 1%;
     border-right: 2px solid grey; }

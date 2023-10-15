@@ -51,9 +51,17 @@ module.exports.destroy = async function (req, res) {
     let comment = await Comment.findById(req.params.id);
     if (comment.user == req.user.id) {
       let postId = comment.post;
+      await comment.deleteOne();
+      await Post.updateOne({ _id: postId }, { $pull: { comments: req.params.id } });
+      if (req.xhr){
+        return res.status(200).json({
+            data: {
+                comment_id: req.params.id
+            },
+            message: "Post deleted"
+        });
+    }
       req.flash('success', 'Comment Deleted!');
-      comment.deleteOne();
-      let post = Post.findByIdAndUpdate(postId, { $pull: {comments: req.params.id}});
       return res.redirect("back");
     }else{
       req.flash('error', 'You are not authorized to do that!');
