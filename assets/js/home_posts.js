@@ -49,8 +49,9 @@
         &emsp;&emsp; ${post.content}
         <h6 style="display: inline;">
           <small>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-            <a class="delete-post-button" href="/posts/destroy/${post._id}">Delete</a>
+            <a class="delete-post-button" href="/posts/destroy/${post._id}">
+              <i class="fa-solid fa-circle-minus fa-xl" style="color:red;"></i>
+            </a>
           </small>
         </h6>
       </h5>

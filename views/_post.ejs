@@ -8,18 +8,36 @@
     <h5 style="display: inline;">&emsp;&emsp;<%= post.content %>
       <h6 style="display: inline;"><% if(locals.user && locals.user.id == post.user.id){ %>
         <small>
-          <i class="fa-solid fa-ellipsis-vertical"></i>
-          <a class="delete-post-button" href="/posts/destroy/<%= post.id %>">Delete</a>
+          <a class="delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fa-solid fa-circle-minus fa-xl" style="color:red;"></i></a>
         </small>
         <% } %>
       </h6>
+      <br>
     </h5>
+    <small>
+      <% if(locals.user){ %>
+        <a class="toggle-like-button" data-likes=" <%= post.likes.length %> " href="/likes/toggle/?id=<%=post._id%>&type=Post">
+          <% if(post.likes.length > 0){ %>
+            i class="fa-solid fa-heart fa-xl"> &nbsp; </i><%= post.likes.length %>
+          <% }else{ %>
+            <i class="fa-solid fa-heart fa-xl"></i>
+          <% } %> 
+        </a>
+      <% }else{ %>
+        <% if(post.likes.length > 0){ %>
+          <i class="fa-solid fa-heart fa-xl"> &nbsp; </i><%= post.likes.length %>
+        <% }else{ %>
+          <i class="fa-solid fa-heart fa-xl"></i>
+        <% } %>
+      <% } %>   
+    </small>
+    <button type="submit" id="like-button"> </button>
       <div class="post-comments">
         <% if(locals.user){ %>
         <form action="/comments/create" id="post-<%= post._id %>-comments-form" method="POST">
           <input type="text" name="content" placeholder="type here to add comment ..." required/>
           <input type="hidden" name="post" value="<%= post._id %>" />
-          <input type="submit" value="Add Comment" />
+          <input type="submit" value="Add Comment"/>
         </form>
         <% } %>
         <div id="post-comments-list">

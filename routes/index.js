@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 const homeController = require("../controllers/home_controller");
-const { route } = require("./users");
+// const { route } = require("./users");
 
 console.log("router loaded");
 

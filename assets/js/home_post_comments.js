@@ -53,7 +53,9 @@ class PostComments {
       <p> &nbsp;${comment.user.name}</p>
         ${comment.content}
       <small>
-        <a class="delete-comment-button" href="/comments/destroy/${comment._id}" >Delete Comment</a>
+        <a class="delete-comment-button" href="/comments/destroy/${comment._id}">
+          <i class="fa-solid fa-circle-minus fa-xl" style="color:red;"></i>
+        </a>
       </small>
     </div>`
     );

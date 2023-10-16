@@ -9,9 +9,9 @@ module.exports.toggleLike = async (req, res) => {
         let deleted = false;
 
         if(req.query.type == 'Post'){
-            likeable = await Post.findById(req.query.id).populate('likes');
+            likeable = await Post.findById(req.query.id).populate('likes', 'user');
         }else{
-            likeable = await Comment.findById(req.query.id).populate('likes');
+            likeable = await Comment.findById(req.query.id).populate('likes','user');
         }
 
         //check if a like already exists
@@ -22,7 +22,7 @@ module.exports.toggleLike = async (req, res) => {
         });
 
         //if a like already exists then delete it
-        if(!existingLike){
+        if(existingLike){
             likeable.likes.pull(existingLike._id);
             likeable.save();
 
@@ -35,7 +35,7 @@ module.exports.toggleLike = async (req, res) => {
                 likeable: req.query.id,
                 onModel: req.query.type
             })
-            likeable.likes.push(like._id);
+            likeable.likes.push(newLike._id);
             likeable.save();
         }
 
@@ -49,6 +49,7 @@ module.exports.toggleLike = async (req, res) => {
     } catch (error) {
         console.log(error);
         return res.json(500, {
+            error: error,
             message: 'Internal Server Error'
         });
     }

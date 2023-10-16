@@ -14,6 +14,10 @@
     .post .border .post-user-info img:hover {
       transform: scale(1.5);
       border: 1px solid #512da8; }
+  .post .border button[type=submit] {
+    outline: none;
+    border: none;
+    background: transparent; }
 
 .post-comments {
   margin: 1vh;

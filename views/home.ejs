@@ -32,4 +32,12 @@
 <script src="https://kit.fontawesome.com/bf0cf320c3.js" crossorigin="anonymous"></script>
 <script src="/js/home_posts.js"></script>
 <script src="/js/home_post_comments.js"></script>
+<script src="/js/toggle_like.js"></script>
+<script>
+    let toggleLikeButton = document.querySelectorAll(".toggle-like-button");
+    toggleLikeButton.forEach(function(toggleElement){
+      // console.log(toggleElement);
+      let toggleLike = new ToggleLike(toggleElement);
+    })
+</script>
 

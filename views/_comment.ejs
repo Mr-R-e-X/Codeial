@@ -4,7 +4,25 @@
   <p> &nbsp;<%= comment.user.name %> </p>
    <%= comment.content %> <% if (locals.user && locals.user.id == comment.user.id){ %>
   <small>
-    <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>">Delete Comment</a>
+    <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>"><i class="fa-solid fa-circle-minus fa-xl" style="color:red;"></i></a>
+  </small>
+  <br>
+  <small>
+    <% if(locals.user){ %>
+      <a class="toggle-like-button" data-likes=" <%= comment.likes.length %> " href="/likes/toggle/?id=<%=comment._id%>&type=Comment">
+        <% if(comment.likes.length > 0){ %>
+          i class="fa-solid fa-heart fa-xl"> &nbsp; </i><%= comment.likes.length %>
+        <% }else{ %>
+          <i class="fa-solid fa-heart fa-xl"></i>
+        <% } %> 
+      </a>
+    <% }else{ %>
+      <% if(comment.likes.length > 0){ %>
+        <i class="fa-solid fa-heart fa-xl"> &nbsp; </i><%= comment.likes.length %>
+      <% }else{ %>
+        <i class="fa-solid fa-heart fa-xl"></i>
+      <% } %>
+    <% } %>   
   </small>
   <% } %>
 </div>
