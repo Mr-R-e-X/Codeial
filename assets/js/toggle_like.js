@@ -10,7 +10,7 @@ class ToggleLike{
         $(this.toggler).click((e)=>{
             e.preventDefault();
             let self = this;
-            // console.log(self);
+
             let URL = $(this.toggler).attr('href');
             console.log(URL);
             $.ajax({
@@ -18,17 +18,16 @@ class ToggleLike{
                 url: URL,
             })
             .done((data) => {
-                let likesCount = parseInt($(this.toggler).attr('data-likes'));
+                let likesCount = parseInt($(self).attr('data-likes'));
                 console.log(likesCount);
-                console.log(data.data);
                 if(data.data.deleted == true){
                     likesCount -= 1;
                 }else{
                     likesCount += 1;
                 }
-
+                console.log(self);
                 $(self).attr('data-likes', likesCount);
-                $(self).htm(`${likesCount} &nbsp;<i class="fa-solid fa-heart fa-xl"></i>`);
+                $("#like-count").html(`${likesCount}`);
             })
             .fail((errorData) => {
                 console.log(`Request is not completed => Error ==> ${errorData}`)

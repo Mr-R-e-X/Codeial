@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/chatbox.css">
+<% if(locals.user) { %>
+<div id="target-chatbox">
+    <a href="#chat-box"><i class="fa-brands fa-rocketchat fa-2xl"></i></a>
+</div>
+<div id="chat-box">
+    <span id="chat-box-header">
+        <h5 id="chat-box-title">Messenger</h5>
+        <a href="#" id="chat-box-close-sign"> <i class="fa-regular fa-circle-xmark fa-lg"></i> </a>
+    </span>
+    
+    <div id="user-chat-box">
+
+        <div id="chat-messages-list">
+            <p class="other-message">
+                <span>demo other chat</span>
+            </p>
+            <p class="self-message">
+                <span>demo self chat</span>
+            </p>
+            <div id="chat-message-input-container">
+                <input type="text" id="chat-message-input" placeholder="Type your message here!!" required>
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+<% } %> 

@@ -17,18 +17,10 @@
     <small>
       <% if(locals.user){ %>
         <a class="toggle-like-button" data-likes=" <%= post.likes.length %> " href="/likes/toggle/?id=<%=post._id%>&type=Post">
-          <% if(post.likes.length > 0){ %>
-            i class="fa-solid fa-heart fa-xl"> &nbsp; </i><%= post.likes.length %>
-          <% }else{ %>
-            <i class="fa-solid fa-heart fa-xl"></i>
-          <% } %> 
+            <i class="fa-solid fa-heart fa-xl"></i>&nbsp;<span><%= post.likes.length %></span> 
         </a>
       <% }else{ %>
-        <% if(post.likes.length > 0){ %>
-          <i class="fa-solid fa-heart fa-xl"> &nbsp; </i><%= post.likes.length %>
-        <% }else{ %>
-          <i class="fa-solid fa-heart fa-xl"></i>
-        <% } %>
+        <i class="fa-solid fa-heart fa-xl"></i>&nbsp; <span id="like-count"><%= post.likes.length %></span> 
       <% } %>   
     </small>
     <button type="submit" id="like-button"> </button>

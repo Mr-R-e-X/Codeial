@@ -25,9 +25,9 @@
         <img src="<%= users.avatar %> " alt="<%= users.name %>">
         <a href="/users/profile/<%= users.id %>"><%= users.name %></a>
       </p>
-
     <% } %>
   </section>
+  <%- include('_chatbox') -%> 
 </div>
 <script src="https://kit.fontawesome.com/bf0cf320c3.js" crossorigin="anonymous"></script>
 <script src="/js/home_posts.js"></script>

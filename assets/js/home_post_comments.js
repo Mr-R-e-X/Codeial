@@ -57,6 +57,11 @@ class PostComments {
           <i class="fa-solid fa-circle-minus fa-xl" style="color:red;"></i>
         </a>
       </small>
+      <small>
+      <a class="toggle-like-button" data-likes=" ${comment.likes.length} " href="/likes/toggle/?id=${comment._id}&type=Comment">
+         <i class="fa-solid fa-heart fa-xl"></i>&nbsp;${comment.likes.length}
+      </a>
+      </small>
     </div>`
     );
   };

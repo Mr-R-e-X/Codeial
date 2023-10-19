@@ -1,0 +1,94 @@
+#target-chatbox{
+    position: sticky;
+    height: fit-content;
+    width: fit-content;
+    top: 94vh;
+    left: 95.5vw;
+}
+#chat-box{
+    height: 0;
+    width: 0;
+    position: fixed;
+    top: 94vh;
+    left: 95.5vw;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    
+}
+#chat-box:target{
+    height: 450px;
+    width: 450px;
+    top: 15vh;
+    left: 55vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 6px lightseagreen;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    #chat-box-header{
+        display: flex;
+        box-sizing: border-box;
+        justify-content: space-between;
+        #chat-box-title{
+            display: inline;
+            position: relative;
+            left: 38%;
+            top: 2px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: white;
+            text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+        }
+        #chat-box-close-sign{
+            margin: 6px;
+            text-decoration: none;
+            i{
+                color: red;
+                font-weight: 700;
+            }
+        }
+    }
+    #user-chat-box{
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        #chat-messages-list{
+            .other-message{
+
+            }
+            .self-message{
+
+            }
+        }
+        #chat-message-input-container{
+            position: absolute;
+            top: 90%;
+            width: 98%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            input[type = text]{
+                width: 85%;
+                padding: 8px 12px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                position: relative;
+                // left: 10%;
+                outline: none;
+            }
+            button{
+                width: 15%;
+                background-color: white;
+                border: 2px solid #4caf50;
+                color: black;
+                text-align: center;
+                padding: 6px 12px;
+                position: relative;
+                text-decoration: none;
+                cursor: pointer;
+                border-radius: 10px;
+                transition-duration: 0.4s;
+            }
+        }
+    }    
+}
