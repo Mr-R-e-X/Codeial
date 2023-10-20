@@ -26,11 +26,12 @@
   #chat-box:target #chat-box-header {
     display: flex;
     box-sizing: border-box;
-    justify-content: space-between; }
+    justify-content: space-between;
+    border-bottom: 1px solid grey; }
     #chat-box:target #chat-box-header #chat-box-title {
       display: inline;
       position: relative;
-      left: 38%;
+      left: 37%;
       top: 2px;
       font-size: 1.5rem;
       font-weight: 600;
@@ -47,29 +48,60 @@
     display: flex;
     flex-direction: column;
     justify-content: baseline; }
+    #chat-box:target #user-chat-box #chat-messages-list .other-message {
+      position: relative;
+      background-color: white;
+      left: 0;
+      width: fit-content;
+      padding: 3px;
+      border: 1px solid black;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 4px 4px 2px grey; }
+    #chat-box:target #user-chat-box #chat-messages-list .self-message {
+      position: absolute;
+      right: 4px;
+      width: fit-content;
+      background-color: antiquewhite;
+      padding: 3px;
+      border: 1px solid black;
+      border-radius: 10px;
+      text-align: right;
+      box-shadow: -5px 4px 4px 0px  grey; }
     #chat-box:target #user-chat-box #chat-message-input-container {
       position: absolute;
       top: 90%;
       width: 98%;
       display: flex;
       flex-direction: row;
-      justify-content: space-between; }
+      justify-content: space-around; }
       #chat-box:target #user-chat-box #chat-message-input-container input[type=text] {
-        width: 85%;
+        width: 88%;
         padding: 8px 12px;
         border: 1px solid #ccc;
         border-radius: 10px;
         position: relative;
         outline: none; }
       #chat-box:target #user-chat-box #chat-message-input-container button {
-        width: 15%;
         background-color: white;
         border: 2px solid #4caf50;
         color: black;
+        width: fit-content;
         text-align: center;
-        padding: 6px 12px;
+        /* justify-content: center; */
+        padding: 6px 10px;
         position: relative;
         text-decoration: none;
         cursor: pointer;
         border-radius: 10px;
         transition-duration: 0.4s; }
+      #chat-box:target #user-chat-box #chat-message-input-container button:hover {
+        opacity: 1;
+        background-color: #04aa6d;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        font-weight: 700;
+        text-align: center;
+        justify-content: center; }
+        #chat-box:target #user-chat-box #chat-message-input-container button:hover i:hover {
+          color: white; }
