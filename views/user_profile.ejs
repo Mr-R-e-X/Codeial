@@ -1,5 +1,6 @@
 <!-- <link rel="stylesheet" href="/css/user_profile.css"> -->
 
+
 <% if(user.id == profile_user.id) { %>
   <aside>
     <img src="<%= user.avatar %> " alt="<%= user.name %>">
@@ -42,7 +43,8 @@
   </div>
 </div>
 <div id="add-friend">
-  <button><i class="fa-solid fa-user-plus"></i>&nbsp;Add Friend</button>
+  <button id="addFrndBtn" userID="<%= profile_user.id %>"><i class="fa-solid fa-user-plus"></i>&nbsp;Add Friend</button>
 </div>
-
 <% } %>
+<script src="/js/frineds.js"></script>
+
