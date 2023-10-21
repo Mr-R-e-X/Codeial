@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: row;
   font-family: 'Montserrat', sans-serif;
-  max-width: 99vw; }
+  width: 100vw;
+  position: relative;
+  top: 8vh; }
   #home-container .posts-title {
     color: antiquewhite;
     text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black; }
@@ -11,7 +13,8 @@
     width: 78%;
     padding-left: 1%;
     padding-right: 1%;
-    border-right: 2px solid grey; }
+    box-shadow: 5px 5px 5px #93aaf7;
+    position: relative; }
     #home-container #feed-posts #new-post-form {
       width: 100%;
       height: auto;
@@ -46,22 +49,41 @@
         color: white;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         font-weight: 700; }
+    #home-container #feed-posts #posts-list-container {
+      position: relative;
+      overflow-y: scroll;
+      overflow-x: hidden; }
+    #home-container #feed-posts #posts-list-container::-webkit-scrollbar {
+      width: 5px; }
   #home-container #user-friends {
-    padding-left: 1%;
+    padding-left: 2%;
     padding-right: 1%;
-    margin-top: 3vh;
+    top: 16vh;
+    width: 22%;
+    position: fixed;
+    left: 78%;
+    height: 40%;
+    overflow-y: scroll;
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding-bottom: 1%; }
     #home-container #user-friends h4 {
       display: flex;
-      width: 100%;
+      min-width: max-content;
+      width: 18%;
+      padding: 1%;
+      background-color: #cfd9f8;
+      top: 8vh;
       color: #fff;
-      position: relative;
+      position: fixed;
       justify-content: center;
       align-items: center;
       text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-      font-weight: 700; }
+      font-weight: 700;
+      border-radius: 15px;
+      box-shadow: 5px 5px 8px #5757e0;
+      z-index: 99; }
     #home-container #user-friends img {
       margin: 0;
       position: relative;
@@ -69,12 +91,22 @@
       width: 38px;
       max-width: 55px;
       border-radius: 50%;
+      transform: scale(1);
       transition-duration: 0.3s; }
     #home-container #user-friends img:hover {
       border: 1px solid #512da8;
-      transform: scale(1.4); }
+      transform: scale(1.2); }
+    #home-container #user-friends p {
+      top: 15px;
+      position: relative;
+      display: flex;
+      padding-left: 12px;
+      grid-gap: 12px;
+      flex-direction: row; }
     #home-container #user-friends a {
       text-decoration: none;
       color: #000;
       font-size: 1.2rem;
       font-weight: 500; }
+  #home-container #user-friends::-webkit-scrollbar {
+    display: none; }

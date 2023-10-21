@@ -24,7 +24,7 @@ aside{
     height: max-content;
     padding-bottom: 3.5vh;
     left: 3vw;
-    top: 5vh;
+    top: 14vh;
     position: relative;
     border-top: 3px solid #512da8;
     border-left: 3px solid #512da8;
@@ -140,5 +140,31 @@ aside{
             left: 2vw;
             color: tomato;
         }
+    }
+}
+#add-friend{
+    position: relative;
+    width: max-content;
+    left: 16%;
+    button{
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 12px;
+        color: green;
+        justify-content: flex-end;
+        display: flex;
+        align-content: stretch;
+        flex-wrap: wrap;
+        align-items: center;
+        font-weight: 600;
+        opacity: 0.9;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    button:hover{
+        opacity: 1;
+        background-color: green;
+        color: white;
     }
 }

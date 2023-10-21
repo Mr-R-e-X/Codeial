@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 body{
   height: 100vh;
-  width: 98.7vw;
+  width: 100vw;
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
   background: linear-gradient(to right, #e2e2e2, #c9d6ff);
-  
+  overflow-x: hidden;
+  // position: fixed;
+  z-index: -1;
+}
+body::-webkit-scrollbar{
+  width: 3px;
+  background-color: chartreuse;
+}
+body::-webkit-scrollbar-thumb{
+  background: linear-gradient(to top, rgb(231, 42, 80), yellow);
+  height: 30px;
 }
