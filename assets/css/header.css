@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-header {
+#header {
   max-width: 100vw;
   min-width: 100vw;
   position: fixed;
@@ -13,7 +13,7 @@ header {
   align-items: center;
   box-shadow: 5px 5px 5px #93aaf7;
   z-index: 999; }
-  header #title {
+  #header #title {
     font-family: 'Montserrat', sans-serif;
     color: white;
     text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
@@ -22,20 +22,20 @@ header {
     text-transform: uppercase;
     display: inline-block;
     display: inline; }
-    header #title a {
+    #header #title a {
       text-decoration: none;
       color: #fff;
       transition-duration: 0.6s; }
-    header #title a:hover {
+    #header #title a:hover {
       color: #c8b2fa; }
-  header #title::before {
+  #header #title::before {
     content: "< CODEIAL />";
     position: absolute;
     top: -2px;
     left: 6px;
     z-index: -9;
     color: #1d1a1a; }
-  header #list {
+  #header #list {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     color: #fff;
@@ -45,16 +45,16 @@ header {
     justify-content: space-between;
     align-items: center;
     position: relative; }
-    header #list div a {
+    #header #list div a {
       font-family: 'Montserrat', sans-serif;
       color: white;
       font-size: 1.5rem;
       text-decoration: none;
       transition-duration: 0.6s;
       text-transform: uppercase; }
-    header #list div a:hover {
+    #header #list div a:hover {
       color: #512da8; }
-    header #list img {
+    #header #list img {
       margin: 0;
       position: relative;
       height: 38px;
@@ -63,6 +63,6 @@ header {
       border-radius: 50%;
       right: 20%;
       transition-duration: 0.3s; }
-    header #list img:hover {
+    #header #list img:hover {
       border: 1px solid #512da8;
       transform: scale(1.4); }

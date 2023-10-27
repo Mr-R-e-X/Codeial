@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/css/chatbox.css">
 <% if(locals.user) { %>
 <div id="target-chatbox">
-    <a href="#chat-box"><i class="fa-brands fa-rocketchat fa-2xl"></i></a>
+    <a href="#chat-box"><i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #3a8d4a;"></i></a>
 </div>
 <div id="chat-box">
     <span id="chat-box-header">
@@ -13,14 +13,14 @@
 
         <div id="chat-messages-list">
             <p class="other-message">
-                <span>demo other chat</span>
+                <span></span>
             </p>
             <p class="self-message">
-                <span>demo self chat</span>
+                <span></span>
             </p>
             <div id="chat-message-input-container">
                 <input type="text" id="chat-message-input" placeholder="Type your message here!!" required>
-                <button id="send-message"><i class="fa-solid fa-share-from-square"></i></button>
+                <button id="send-message"><i class="ri-send-plane-2-fill"></i></button>
             </div>
         </div>
     </div>

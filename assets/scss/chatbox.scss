@@ -66,8 +66,9 @@
                 box-shadow: 4px 4px 2px grey;
             }
             .self-message{
-                position: absolute;
-                right: 4px;
+                position: relative;
+                left: 50%;
+                margin-bottom: 4px;
                 width: fit-content;
                 background-color: antiquewhite;
                 padding: 3px;

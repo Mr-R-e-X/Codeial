@@ -17,6 +17,22 @@ const customMware = require('./config/middleware');
 const favicon = require('serve-favicon')
 const path = require('path');
 
+// Setting up chat server to be used with Socket.io
+const cors = require('cors'); // for cross server, other wise one server will always block another one 
+const chatServer = require('http').Server(app);
+const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
+chatServer.listen(5000, (err)=>{
+  if(err){
+    console.log(`chat server problem ===> ${err}`);
+  }
+  console.log('Chat server is running on port 5000');
+});
+// const io = require("socket.io")(chatServer, {
+//   cors: {
+//     origin: '*',
+//   }
+// });
+
 app.use(
   sassMidleware({
     src: "./assets/scss",

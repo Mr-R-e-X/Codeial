@@ -16,7 +16,8 @@
           <% }else if(friends.to_user._id == locals.user.id) {%>
             <p class="list-users">
               <img src="<%= friends.from_user.avatar %> " alt="<%= friends.from_user.name %>">
-              <a href="/users/profile/<%= friends.from_user._id %>"><%= friends.from_user.name %></a>   
+              <a href="/users/profile/<%= friends.from_user._id %>"><%= friends.from_user.name %></a>
+              <a href=""><i class="fa-brands fa-facebook-messenger"></i></a>   
           </p> 
           <% } %>
         <% } %> 
@@ -78,5 +79,10 @@
     })
 </script>
 <script src="/js/frineds.js"></script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+<% if(locals.user) {%> 
+<script>
+  new chatEngine('user-chat-box', '<%= locals.user.email %>', '<%= locals.user.name %>');
+</script>
+<% } %>
