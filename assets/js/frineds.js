@@ -1,5 +1,8 @@
-let addFrndBtn = document.querySelector("#addFrndBtn")
-addFrndBtn.addEventListener("click", ()=>{
-    console.log("btn clicked");
-    console.log(addFrndBtn.getAttribute("userID"))
+let addFrndBtn = document.querySelectorAll("#addFrndBtn")
+addFrndBtn.forEach( (elem)=> {
+    console.log(elem.getAttribute("userID"));
+    console.log(`local user id ==> ${elem.getAttribute("localUserID")}`)
+});
+addFrndBtn.addEventListener("click", (element)=>{
+    console.log(element);
 })

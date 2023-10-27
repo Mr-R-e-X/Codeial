@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+p {
+  margin: 0;
+  padding: 0; }
+
 #home-container {
   display: flex;
   flex-direction: row;
@@ -9,12 +13,73 @@
   #home-container .posts-title {
     color: antiquewhite;
     text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black; }
+  #home-container #friends-list {
+    position: fixed;
+    width: 18%;
+    top: 16vh;
+    padding-left: 0.5%;
+    padding-right: 1%;
+    position: fixed;
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: wrap;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1%; }
+    #home-container #friends-list h4 {
+      display: flex;
+      min-width: max-content;
+      width: 18%;
+      padding: 1%;
+      background-color: #cfd9f8;
+      top: 8vh;
+      color: #fff;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      font-weight: 700;
+      border-radius: 15px;
+      box-shadow: 5px 5px 8px #5757e0;
+      z-index: 99; }
+    #home-container #friends-list .list-users {
+      top: 15px;
+      position: relative;
+      display: flex;
+      padding-left: 12px;
+      padding-bottom: 12px;
+      grid-gap: 12px;
+      flex-direction: row; }
+      #home-container #friends-list .list-users img {
+        margin: 0;
+        position: relative;
+        height: 38px;
+        width: 38px;
+        max-width: 55px;
+        border-radius: 50%;
+        transform: scale(1);
+        transition-duration: 0.3s; }
+      #home-container #friends-list .list-users img:hover {
+        border: 1px solid #512da8;
+        transform: scale(1.2); }
+      #home-container #friends-list .list-users a {
+        text-decoration: none;
+        color: #000;
+        font-size: 1.2rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+  #home-container #friends-list::-webkit-scrollbar {
+    display: none; }
   #home-container #feed-posts {
-    width: 78%;
+    width: 60%;
     padding-left: 1%;
     padding-right: 1%;
     box-shadow: 5px 5px 5px #93aaf7;
-    position: relative; }
+    position: relative;
+    left: 18.5vw; }
     #home-container #feed-posts #new-post-form {
       width: 100%;
       height: auto;
@@ -59,10 +124,10 @@
     padding-left: 2%;
     padding-right: 1%;
     top: 16vh;
-    width: 22%;
+    width: 20%;
     position: fixed;
     left: 78%;
-    height: 40%;
+    height: 80%;
     overflow-y: scroll;
     font-family: 'Montserrat', sans-serif;
     justify-content: center;
@@ -96,17 +161,43 @@
     #home-container #user-friends img:hover {
       border: 1px solid #512da8;
       transform: scale(1.2); }
-    #home-container #user-friends p {
+    #home-container #user-friends .list-users {
       top: 15px;
       position: relative;
       display: flex;
       padding-left: 12px;
+      padding-bottom: 12px;
       grid-gap: 12px;
       flex-direction: row; }
+      #home-container #user-friends .list-users #addFrndBtn {
+        width: max-content;
+        position: absolute;
+        left: 85%;
+        right: 1.5%;
+        height: max-content;
+        align-items: end;
+        outline: none;
+        border: none;
+        padding: 1px 12px;
+        color: green;
+        justify-content: flex-end;
+        display: flex;
+        background: transparent;
+        flex-wrap: wrap;
+        align-items: center;
+        opacity: 0.9;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out; }
+      #home-container #user-friends .list-users #addFrndBtn:hover {
+        opacity: 1;
+        transform: scale(1.4); }
     #home-container #user-friends a {
       text-decoration: none;
       color: #000;
       font-size: 1.2rem;
-      font-weight: 500; }
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
   #home-container #user-friends::-webkit-scrollbar {
     display: none; }
